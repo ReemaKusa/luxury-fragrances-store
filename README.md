@@ -50,5 +50,5 @@ npm install
 ng serve
 
 Then open `http://localhost:4200`.
-
-Author: Reema Kusa
+```
+## Author: Reema Kusa
