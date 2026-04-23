@@ -1,0 +1,28 @@
+.confirmation-page {
+  min-height: calc(100vh - 88px);
+  display: grid;
+  place-items: center;
+  padding: 40px 0 80px;
+}
+
+.success-box {
+  width: min(760px, 100%);
+  text-align: center;
+  background: rgba(255,255,255,0.66);
+  border: 1px solid rgba(43,43,43,0.08);
+  padding: 56px 38px;
+  box-shadow: 0 28px 60px rgba(34, 60, 58, 0.1);
+}
+
+.success-box h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 10px 0 18px;
+}
+
+.success-box p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}

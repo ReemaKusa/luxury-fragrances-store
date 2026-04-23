@@ -1,0 +1,57 @@
+<div class="detail-page shell" *ngIf="product">
+  <a routerLink="/" class="back-link">← Back to collection</a>
+
+  <section class="detail-layout">
+    <div class="detail-media">
+      <img [src]="product.image" [alt]="product.name" />
+    </div>
+
+    <div class="detail-info">
+      <p class="eyebrow">{{ product.brand }}</p>
+      <h1>{{ product.name }}</h1>
+      <p class="category">{{ product.category }} · {{ product.gender }} · {{ product.release_year }}</p>
+      <p class="price">${{ product.price }}</p>
+      <p class="lead">{{ product.description }}</p>
+      <p class="about">{{ product.about }}</p>
+
+      <div *ngIf="message" class="alert">{{ message }}</div>
+
+      <div class="fragrance-notes">
+        <div>
+          <h3>Top notes</h3>
+          <p>{{ product.top_notes.join(' · ') }}</p>
+        </div>
+        <div>
+          <h3>Middle notes</h3>
+          <p>{{ product.middle_notes.join(' · ') }}</p>
+        </div>
+        <div>
+          <h3>Base notes</h3>
+          <p>{{ product.base_notes.join(' · ') }}</p>
+        </div>
+      </div>
+
+      <div class="detail-meta">
+        <div><span>Perfumer</span><strong>{{ product.perfumer.join(', ') }}</strong></div>
+        <div><span>Longevity</span><strong>{{ product.longevity }}</strong></div>
+        <div><span>Sillage</span><strong>{{ product.sillage }}</strong></div>
+        <div><span>Occasion</span><strong>{{ product.occasion }}</strong></div>
+      </div>
+
+      <div class="purchase-row">
+        <div class="qty-box">
+          <label for="quantity">Quantity</label>
+          <input
+            id="quantity"
+            type="number"
+            min="1"
+            [(ngModel)]="quantity"
+            (ngModelChange)="onQuantityChange($event)"
+          />
+        </div>
+
+        <button type="button" class="cta-button" (click)="addToCart()">Add to bag</button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,28 @@
+<article class="perfume-card">
+  <a class="card-image-wrap" [routerLink]="['/products', product.id]">
+    <img [src]="product.image" [alt]="product.name" />
+  </a>
+
+  <div class="card-body">
+    <h3>{{ product.name }}</h3>
+    <p class="subline">{{ product.brand }} · {{ product.category }}</p>
+    <p class="meta">Eau de parfum · {{ product.release_year }}</p>
+    <p class="price">${{ product.price }}</p>
+
+    <div class="actions">
+      <div class="qty-wrap">
+        <label for="qty-{{ product.id }}">Qty</label>
+        <input
+          id="qty-{{ product.id }}"
+          type="number"
+          min="1"
+          [(ngModel)]="quantity"
+          (ngModelChange)="onQuantityChange($event)"
+        />
+      </div>
+
+      <button type="button" class="inline-action" (click)="addToCart()">ADD TO BAG</button>
+      <a [routerLink]="['/products', product.id]" class="inline-action">VIEW DETAILS</a>
+    </div>
+  </div>
+</article>

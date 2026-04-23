@@ -1,0 +1,136 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(14px);
+  background: rgba(246, 246, 244, 0.9);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.08);
+}
+
+.shell {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  align-items: center;
+  min-height: 88px;
+  gap: 18px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.6;
+  transform: translateY(-1px);
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover,
+.bag-link:hover {
+  opacity: 0.65;
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  stroke: #000;
+  stroke-width: 1.7;
+  fill: none;
+  display: block;
+}
+
+.bag-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+@media (max-width: 980px) {
+  .header-grid {
+    grid-template-columns: 1fr;
+    padding: 18px 0;
+  }
+
+  .brand,
+  .header-actions,
+  .main-nav {
+    justify-self: center;
+  }
+
+  .main-nav {
+    gap: 14px 18px;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+
+  .icon {
+    width: 21px;
+    height: 21px;
+  }
+
+}

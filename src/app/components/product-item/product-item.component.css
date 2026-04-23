@@ -1,0 +1,98 @@
+.perfume-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(43,43,43,0.08);
+  padding: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.perfume-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(34, 60, 58, 0.12);
+  border-color: rgba(47,79,79,0.18);
+}
+
+.card-image-wrap {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  aspect-ratio: 0.9;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.perfume-card:hover img {
+  transform: scale(1.045);
+}
+
+.card-body {
+  text-align: center;
+  padding: 18px 8px 8px;
+}
+
+.card-body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.subline,
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.meta {
+  margin-top: 4px;
+}
+
+.price {
+  margin: 16px 0;
+  font-size: 1.25rem;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.qty-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qty-wrap label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.qty-wrap input {
+  width: 74px;
+  text-align: center;
+}
+
+.inline-action {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(43,43,43,0.22);
+}
+
+.inline-action:hover {
+  border-bottom-color: var(--accent);
+}

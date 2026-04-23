@@ -1,0 +1,238 @@
+.home-page {
+  padding-bottom: 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 42px;
+  align-items: center;
+  padding: 46px 0 80px;
+  min-height: 72vh;
+}
+
+.hero-copy,
+.hero-visual,
+.discover-side {
+  position: relative;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.discover-side h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: var(--ink);
+}
+
+.hero-copy h1 {
+  font-size: clamp(3.5rem, 7vw, 7.4rem);
+  margin: 28px 0 40px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: min(100%, 500px);
+  aspect-ratio: 0.78;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 26px 60px rgba(53, 71, 69, 0.14);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.hero-visual img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 34px 80px rgba(53, 71, 69, 0.2);
+}
+
+.section-heading {
+  text-align: center;
+  padding: 24px 0 34px;
+  border-top: 1px solid rgba(43, 43, 43, 0.08);
+}
+
+.section-heading h2,
+.discover-side h2 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  margin: 0 0 12px;
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.toast {
+  position: sticky;
+  top: 104px;
+  z-index: 20;
+  width: fit-content;
+  margin: 0 auto 18px;
+  background: rgba(47, 79, 79, 0.94);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(47, 79, 79, 0.2);
+}
+
+.discover {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 28px;
+  align-items: start;
+  padding-top: 84px;
+}
+
+.discover-portrait img {
+  width: 100%;
+  min-height: 780px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.discover-side {
+  padding: 24px 3vw 0;
+}
+
+.mini-card {
+  margin-top: 36px;
+  background: rgba(255,255,255,0.66);
+  border: 1px solid rgba(43,43,43,0.08);
+  padding: 18px;
+  width: min(360px, 100%);
+  backdrop-filter: blur(8px);
+}
+
+.mini-card img {
+  width: 100%;
+  aspect-ratio: 0.9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.mini-card h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+
+.mini-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(43,43,43,0.25);
+}
+
+.text-link span {
+  transition: transform 0.3s ease;
+}
+
+.text-link:hover span {
+  transform: translateX(6px);
+}
+
+.botanical-left,
+.botanical-right,
+.discover-flower {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.18;
+  filter: grayscale(1);
+}
+
+.botanical-left,
+.botanical-right,
+.discover-flower {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%2383928f' stroke-width='2'%3E%3Cpath d='M150 154c28-64 51-100 72-112 12 33-2 68-32 91-8 6-24 15-40 21Z'/%3E%3Cpath d='M147 154c-44-43-73-63-99-67 9 31 38 55 71 63 10 2 21 4 28 4Z'/%3E%3Cpath d='M152 154c2-56-5-96-22-121-20 29-22 66-7 97 5 10 14 18 29 24Z'/%3E%3Cpath d='M149 154c38 7 71 26 100 56-28 2-53-4-79-18-8-4-14-10-21-18Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.botanical-left {
+  left: -20px;
+  top: 20px;
+  width: 260px;
+  height: 260px;
+}
+
+.botanical-right {
+  right: -30px;
+  bottom: 40px;
+  width: 220px;
+  height: 220px;
+}
+
+.discover-flower {
+  right: 10px;
+  top: 0;
+  width: 260px;
+  height: 260px;
+}
+
+.fade-in {
+  animation: fadeUp 0.9s ease both;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .product-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero,
+  .discover {
+    grid-template-columns: 1fr;
+  }
+
+  .discover-portrait img {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 720px) {
+  .product-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 28px;
+  }
+}

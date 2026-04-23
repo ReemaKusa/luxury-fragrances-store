@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="shell header-grid">
+    <a routerLink="/" class="brand">FLEUR</a>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a routerLink="/">ABOUT</a>
+      <a routerLink="/">SHOP</a>
+      <a routerLink="/">SPECIAL OFFERS</a>
+      <a routerLink="/">COLLECTIONS</a>
+      <a routerLink="/">PARFUMES GUIDE</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Search -->
+      <button type="button" aria-label="Search" class="icon-btn">
+        <svg viewBox="0 0 24 24" class="icon">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+        </svg>
+      </button>
+
+      <!-- Account -->
+      <button type="button" aria-label="Account" class="icon-btn">
+        <svg viewBox="0 0 24 24" class="icon">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M4 20c1.5-4 6.5-4 8-4s6.5 0 8 4"></path>
+        </svg>
+      </button>
+
+      <!-- Bag -->
+      <a routerLink="/cart" class="bag-link" aria-label="Bag">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M6 8h12l-1 12H7L6 8Z"></path>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+        </svg>
+
+        <span *ngIf="cartCount > 0" class="badge">
+          {{ cartCount }}
+        </span>
+      </a>
+    </div>
+  </div>
+</header>

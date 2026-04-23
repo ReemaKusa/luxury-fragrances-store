@@ -1,0 +1,55 @@
+<div class="home-page">
+  <section class="hero shell">
+    <div class="hero-copy fade-in">
+      <div class="hero-botanical botanical-left"></div>
+      <p class="eyebrow">Spring signature collection</p>
+      <h1>THE ART OF SCENT,<br>THE ESSENCE<br>OF SPRING</h1>
+      <a class="text-link" href="#collection">NEW SCENTS HERE <span>→</span></a>
+    </div>
+
+    <div class="hero-visual fade-in delay-1">
+      <div class="hero-botanical botanical-right"></div>
+      <img
+        src="https://i.pinimg.com/1200x/7c/29/a7/7c29a77a9ac1a33ff07f573a45ff72de.jpg"
+        alt="Luxury perfume bottle"
+      />
+    </div>
+  </section>
+
+  <section class="section-heading shell fade-in">
+    <h2>CUSTOMER FAVORITES</h2>
+    <a class="text-link" href="#collection">ALL BESTSELLERS HERE <span>→</span></a>
+  </section>
+
+  <div *ngIf="message" class="toast">{{ message }}</div>
+
+  <section id="collection" class="product-showcase shell fade-in delay-1">
+    <app-product-item
+      *ngFor="let product of products"
+      [product]="product"
+      (added)="handleAddToCart($event)"
+    ></app-product-item>
+  </section>
+
+  <section class="discover shell fade-in delay-2">
+    <div class="discover-portrait">
+      <img
+        src="https://i.pinimg.com/736x/45/1f/a8/451fa8f8c64ee50402f6fbedb8a5f225.jpg"
+        alt="Model with floral styling"
+      />
+    </div>
+
+    <div class="discover-side">
+      <div class="discover-flower"></div>
+      <h2>DISCOVER<br>NEW</h2>
+      <article class="mini-card" *ngIf="products[3] as featured">
+        <img [src]="featured.image" [alt]="featured.name" />
+        <div>
+          <h3>{{ featured.name }}</h3>
+          <p>{{ featured.brand }}</p>
+          <a [routerLink]="['/products', featured.id]" class="text-link">VIEW FRAGRANCE <span>→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
