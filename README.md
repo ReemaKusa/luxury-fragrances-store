@@ -1,12 +1,12 @@
-# 🌸 FLEUR – Perfume Store (Angular Project)
+#  FLEUR – Perfume Store (Angular Project)
 
-## 📌 Overview
+##  Overview
 FLEUR is a single-page e-commerce web application built using Angular.  
 The project represents a luxury perfume store where users can browse products, view details, add items to cart, and complete checkout.
 
 ---
 
-## ✨ Features
+##  Features
 - View list of perfumes
 - View perfume details
 - Add to cart
@@ -18,7 +18,7 @@ The project represents a luxury perfume store where users can browse products, v
 
 ---
 
-## 🧱 Technologies
+##  Technologies
 - Angular
 - TypeScript
 - HTML / CSS
@@ -27,7 +27,7 @@ The project represents a luxury perfume store where users can browse products, v
 
 ---
 
-## 📁 Structure
+##  Structure
 - components → UI pages (products, cart, details...)
 - services → business logic (cart, data)
 - models → data structure
@@ -35,7 +35,7 @@ The project represents a luxury perfume store where users can browse products, v
 
 ---
 
-## 🧠 Logic
+##  Logic
 - Data is loaded from `data.json`
 - Cart is handled using a shared service
 - Components communicate using @Input and @Output
@@ -43,7 +43,7 @@ The project represents a luxury perfume store where users can browse products, v
 
 ---
 
-## ▶️ Run Project
+##  Run Project
 
 ```bash
 npm install
